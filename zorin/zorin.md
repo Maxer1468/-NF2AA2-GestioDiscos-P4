@@ -13,7 +13,7 @@ Aqui creem dos discs de **10GB** a la maquina virtual Linux.
 
 ![](./img-zorin/2.png)
 
-Amb la comanda:
+**Amb la comanda:**
 ```bash 
 lsblk
 ```
@@ -21,7 +21,7 @@ comprovem que els discs estiguin creats.
 
 ![](./img-zorin/3.png)
 
-Amb les comandes:
+**Amb les comandes:**
 ```bash
 sudo pvcreate /dev/sdb
 sudo pvcreate /dev/sdc
@@ -30,11 +30,18 @@ passem els discos virtuals que hem creat a discos físics.
 
 ![](./img-zorin/4.png)
 
-Amb els discs físics ja creats fem servir la comanda:
+**Amb els discs físics ja creats fem servir la comanda:**
 ```bash
 sudo vgcreate vg1 /dev/sdb /dev/sdc
 ```
 per aixi crear el nostre grup de volums lògics.
+
+![](./img-zorin/5.png)
+
+**Ara el disc físic que hem fet el transformem a lògic amb la comanda:**
+```bash
+sudo lvcreate -L 10G -n lv1 vg1
+```
 
 * Alta Disponibilitat: Implementar la configuració d’un mirall (lvm_mirror) que protegeixi la informació davant la fallada d'un disc.
 
