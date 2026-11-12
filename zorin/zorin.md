@@ -7,11 +7,11 @@ Requisits de la Implementació i Demostració:
 
 * Configuració Inicial: Crear un grup de volums (VG) i un volum lògic (LV) utilitzant inicialment un mínim de dos discs durs de 10 GB de capacitat. Aquest volum haurà estar formatat i muntat automàticament al sistema mitjançant l’edició de l’arxiu /etc/fstab.
 
-![](./img/1.png)
+![](./img-zorin/1.png)
 
 Aqui creem dos discs de **10GB** a la maquina virtual Linux.
 
-![](./img/2.png)
+![](./img-zorin/2.png)
 
 Amb la comanda:
 ```bash 
@@ -19,7 +19,7 @@ lsblk
 ```
 comprovem que els discs estiguin creats.
 
-![](./img/3.png)
+![](./img-zorin/3.png)
 
 Amb les comandes:
 ```bash
@@ -28,7 +28,7 @@ sudo pvcreate /dev/sdc
 ```
 passem els discos virtuals que hem creat a discos físics.
 
-![](./img/4.png)
+![](./img-zorin/4.png)
 
 Amb els discs físics ja creats fem servir la comanda:
 ```bash
